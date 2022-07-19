@@ -16,23 +16,23 @@ use crate::{Fuse, Spool};
 
 #[test]
 fn it_works() {
-	let neighbors = [true, true, true, true, true, false, true, false];
-	let maximum_cells = 3;
+   let neighbors = [true, true, true, true, true, false, true, false];
+   let maximum_cells = 3;
 
-	let number_of_true = neighbors
-		.iter()
-		.spool(0, |acc, condition| {
-				if *condition {
-					if acc < maximum_cells {
-						Fuse::Continue(acc + 1)
-					} else {
-						Fuse::Break(acc)
-					}
-				} else {
-					Fuse::Continue(acc)
-				}
-		});
+   let number_of_true = neighbors
+      .iter()
+      .spool(0, |acc, condition| {
+            if *condition {
+               if acc < maximum_cells {
+                  Fuse::Continue(acc + 1)
+               } else {
+                  Fuse::Break(acc)
+               }
+            } else {
+               Fuse::Continue(acc)
+            }
+      });
 
-	dbg!(number_of_true > maximum_cells);
+   dbg!(number_of_true > maximum_cells);
 }
 ```
