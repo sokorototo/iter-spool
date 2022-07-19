@@ -1,0 +1,10 @@
+[package]
+name = "iter-spool"
+description = "Provides an extension to Iterator that allows you to `spool`, ie fold until a condition is met"
+authors = ["Newton Toto<nyachiengatoto@gmail.com>"]
+version = "0.1.0"
+edition = "2021"
+license = "MIT"
+keywords = ["no_std", "itertools", "iterator", "spool"]
+categories = ["tools", "no_std"]
+readme = "README.md"
