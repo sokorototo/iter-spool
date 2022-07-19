@@ -1,6 +1,6 @@
 [package]
 name = "iter-spool"
-description = "Provides an extension to Iterator that allows you to `spool`, ie fold until a condition is met"
+description = "The poor man's try_fold"
 authors = ["Newton Toto<nyachiengatoto@gmail.com>"]
 version = "0.1.0"
 edition = "2021"
